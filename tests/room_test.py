@@ -46,9 +46,16 @@ class TestRoom(unittest.TestCase):
         #2 people left in the room
         self.assertEqual(2, self.room.guest_count())
     
-    # def test_add_songs_to_room(self):
-    #     self.room.add_song_to_room(self.guest_andy)
-    #     self.assertEqual(1, self.room.songs_count())
+    def test_add_songs_to_room(self):
+        self.room.add_song_to_room(self.song1)
+        self.assertEqual(1, self.room.song_count())
+    
+    def test_song_count(self):
+        self.room.add_song_to_room(self.song1)
+        self.room.add_song_to_room(self.song2)
+        self.room.add_song_to_room(self.song3)
+        self.room.add_song_to_room(self.song4)
+        self.assertEqual(4, self.room.song_count())
 
     def test_remove_money_to_till(self):
         pass

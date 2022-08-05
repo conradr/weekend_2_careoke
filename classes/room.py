@@ -30,5 +30,7 @@ class Room:
     def song_count(self):
         return len(self.songs)
 
+    def add_song_to_room(self, song):
+      self.songs.append(song)
 
 
