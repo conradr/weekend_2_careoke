@@ -51,5 +51,11 @@ class Room:
             return True
         else:
             return False
+    
+    def spend_money(self, person, amount):
+        
+        spend = {"person": person, "spend": amount}
+        self.bar_tab.append(spend)
+        print(self.bar_tab)
 
 

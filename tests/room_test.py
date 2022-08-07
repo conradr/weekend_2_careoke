@@ -115,7 +115,16 @@ class TestRoom(unittest.TestCase):
         # add money to till
         # a
         # add amount to bar tab object
-        pass
+        #self.assertEqual(20, self.room.bar_tab[0]["spend"])
+        self.room.check_in_guest(self.room, self.guest_andy)
+        self.room.check_in_guest(self.room, self.guest_jane)
+        self.room.spend_money(self.guest_andy, 30)
+        print("\n")
+        self.room.spend_money(self.guest_andy, 50)
+        print("\n")
+        self.room.spend_money(self.guest_jane, 100)
+        print("\n")
+        self.room.spend_money(self.guest_jane, 120)
     
     def test_add_spend_to_bar_tab(self):
         pass
